@@ -52,18 +52,21 @@
 
 //----- WHICH VALUE IS GREATER THAN OTHER
 
-const WichGreater = (num1 = parseInt(prompt('Ingrese el primer numero')),num2 = parseInt(prompt('Ingrese otro numero para comparar')))=> {
-    if (num1 > num2) {
-        document.write(`El primer numero <b> ${num1} </b> es <b> MAYOR </b>`);
-    }
-    if (num2 > num1) {
-        document.write(`El segundo numero <b> ${num2} </b> es <b> MAYOR </b>`);
-    }
-    if (num1 == num2) {
-        document.write(`Ambos numeros <b> ${num1} </b> son <b> IGUALES </b>`);
-    } else {
-        document.write('Ingrese un numero valido');
-    }  
-}
+// const WichGreater = (num1 = parseInt(prompt('Ingrese el primer numero')),
+//                     num2 = parseInt(prompt('Ingrese otro numero para comparar')))=> {
+//     if (num1 > num2) {
+//         document.write(`El primer numero <b> ${num1} </b> es <b> MAYOR </b> que ${num2}</br>`);
+//     }
+//     else if (num2 > num1) {
+//         document.write(`El segundo numero <b> ${num2} </b> es <b> MAYOR </b> que ${num1}</br>`);
+//     }
+//     else if (num1 == num2) {
+//             document.write(`Ambos numeros <b> ${num1} </b> son <b> IGUALES </b></br>`);
+//     } else {
+//         document.write('Ingrese un numero valido');
+//     }  
+// }
 
-WichGreater();
+// WichGreater();
+// WichGreater();
+

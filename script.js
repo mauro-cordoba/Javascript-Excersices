@@ -1,4 +1,4 @@
-//* CONVERSOR FROM 'MM' TO 'INCHES'
+//---- CONVERSOR FROM 'MM' TO 'INCHES'
 
 // const conversor = (num) => {
 //     let value = console.log(`Number ${num} will be convert to inches`);
@@ -13,7 +13,7 @@
 
 // conversor(23);
 
-// MULTIPLICATION BY
+// ---- MULTIPLICATION BY
 
 // class multi {
 //     constructor(number, multiplicator) {
@@ -30,22 +30,40 @@
 
 // operation.result();
 
-// NUMBER POSITIVE OR NEGATIVE
+// ----- NUMBER POSITIVE OR NEGATIVE
 
-const posOrNeg = (num) => {
-    if ( num > 0) {
-        document.write(`El numero <b>${num}</b> es <b> POSITIVO </b>`);
+// const posOrNeg = (num) => {
+//     if ( num > 0) {
+//         document.write(`El numero <b>${num}</b> es <b> POSITIVO </b>`);
+//     }
+//     if (num < 0) {
+//         document.write(`El numero <b>${num}</b> es <b> NEGATIVO </b>`);
+//     }
+//     if (num == 0) {
+//         document.write(`El numero <b>${num}</b> es <b> ZERO </b>`);
+//     }
+//     else {
+//         document.write('Ingrese un numero valido');
+//     }
+
+// }
+
+// posOrNeg(2);
+
+//----- WHICH VALUE IS GREATER THAN OTHER
+
+const WichGreater = (num1 = parseInt(prompt('Ingrese el primer numero')),num2 = parseInt(prompt('Ingrese otro numero para comparar')))=> {
+    if (num1 > num2) {
+        document.write(`El primer numero <b> ${num1} </b> es <b> MAYOR </b>`);
     }
-    if (num < 0) {
-        document.write(`El numero <b>${num}</b> es <b> NEGATIVO </b>`);
+    if (num2 > num1) {
+        document.write(`El segundo numero <b> ${num2} </b> es <b> MAYOR </b>`);
     }
-    if (num == 0) {
-        document.write(`El numero <b>${num}</b> es <b> ZERO </b>`);
-    }
-    else {
+    if (num1 == num2) {
+        document.write(`Ambos numeros <b> ${num1} </b> son <b> IGUALES </b>`);
+    } else {
         document.write('Ingrese un numero valido');
-    }
-
+    }  
 }
 
-posOrNeg(2);
+WichGreater();

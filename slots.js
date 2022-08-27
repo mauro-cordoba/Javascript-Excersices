@@ -28,15 +28,14 @@ let profitsBtc = [
 	['Bitcoin1000', btc1000]
 ]
 
-document.write(profitsBtc[0]);
-
 for ( let i = 0; i < profitsBtc.length; i++) {
-    document.write(`${i+1}, Coeficient Prize: <b>${profitsBtc.Bitcoin22[i][0]}</b>`+ '</br>');
+    document.write(`${i+1}, Coeficient Prize ${profitsBtc[i][0]} : <b>${profitsBtc[i][1]}</b>`+ '</br>');
 }
 
 let btc = 5000;
 let days = 0;
 
+document.write('</br>'+'Prediction of pool prizes'+'</br>'+ '</br>');
 
 loopPrizes:
 while (btc < 725000) {

@@ -1,19 +1,43 @@
 // ---Program for predict points of slots streaming and win profits in cash only farming hours--
 
-
-const points = '';
-
 //----MOST COEFICIENTE IS BETTER PROFIT FOR THE POINS
 
-let btc22 = (22 / 45000) * 10000;
-let btc25 = (25 / 50000) * 10000;
-let btc50 = (50 / 75000) * 10000;
-let btc69 = (69 / 95000) * 10000;
-let btc100 = (100 / 125000) * 10000;
-let btc250 = (250 / 250000) * 10000;
-let btc420 = (420 / 400000) * 10000;
-let btc500 = (500 / 475000) * 10000;
-let btc1000 = (1000 / 725000) * 10000;
+
+// --CONST POINTS FOR POOL PRIZES--
+
+let p22 = 45000;
+let p25 = 50000;
+let p50 = 75000;
+let p69 = 95000;
+let p100 = 125000;
+let p250 = 250000;
+let p420 = 400000;
+let p500 = 475000;
+let p1000 = 725000;
+
+// --CONST DOLLAR PRIZES--
+
+let dollar22 = 22;
+let dollar25 = 25;
+let dollar50 = 50;
+let dolar69 = 69;
+let dollar100 = 100;
+let dollar250 = 250;
+let dollar420 = 420;
+let dollar500 = 500;
+let dollar1000 = 1000;
+
+// ---VARIABLES PRIZE POOL--
+
+let btc22 = (dollar22 / p22) * 10000;
+let btc25 = (dollar25 / p25) * 10000;
+let btc50 = (dollar50 / p50) * 10000;
+let btc69 = (dolar69 / p69) * 10000;
+let btc100 = (dollar100 / p100) * 10000;
+let btc250 = (dollar250 / p250) * 10000;
+let btc420 = (dollar420 / p420) * 10000;
+let btc500 = (dollar500 / p500) * 10000;
+let btc1000 = (dollar1000 / p1000) * 10000;
 
 // ------------------- //
 
@@ -71,3 +95,39 @@ while (btc < 725000) {
     }
 
 }
+
+
+const predictor = (streamDays, points) => {
+		let res = streamDays * points;
+		if (res > p22 && res < p25) {
+			document.write(`${res} points for <b>${dollar22} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		}
+		if (res > p25 && res < p50) {
+			document.write(`${res} points for <b>${dollar25} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		}
+		if (res > p50 && res < p69) {
+			document.write(`${res} points for <b>${dollar50} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		}
+		if (res > p69 && res < p100) {
+			document.write(`${res} points for <b>${dollar69} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		}
+		if (res > p100 && res < p250) {
+			document.write(`${res} points for <b>${dollar100} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		}
+		if (res > p250 && res < p420) {
+			document.write(`${res} points for <b>${dollar250} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		}
+		if (res > p420 && res < p500) {
+			document.write(`${res} points for <b>${dollar420} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		}
+		if (res > p500 && res < p1000) {
+			document.write(`${res} points for <b>${dollar500} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		}
+		if (res >= p1000) {
+			document.write(`${res} points for <b>${dollar1000} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		}
+}
+
+document.write('------------' + '</br>' + '------------' + '</br>');
+
+predictor(23, 2500);

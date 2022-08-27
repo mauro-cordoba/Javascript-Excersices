@@ -20,7 +20,7 @@ let p1000 = 725000;
 let dollar22 = 22;
 let dollar25 = 25;
 let dollar50 = 50;
-let dolar69 = 69;
+let dollar69 = 69;
 let dollar100 = 100;
 let dollar250 = 250;
 let dollar420 = 420;
@@ -32,7 +32,7 @@ let dollar1000 = 1000;
 let btc22 = (dollar22 / p22) * 10000;
 let btc25 = (dollar25 / p25) * 10000;
 let btc50 = (dollar50 / p50) * 10000;
-let btc69 = (dolar69 / p69) * 10000;
+let btc69 = (dollar69 / p69) * 10000;
 let btc100 = (dollar100 / p100) * 10000;
 let btc250 = (dollar250 / p250) * 10000;
 let btc420 = (dollar420 / p420) * 10000;
@@ -56,72 +56,39 @@ for ( let i = 0; i < profitsBtc.length; i++) {
     document.write(`${i+1}, Coeficient Prize ${profitsBtc[i][0]} : <b>${profitsBtc[i][1]}</b>`+ '</br>');
 }
 
-let btc = 5000;
-let days = 0;
+document.write('------------' + '</br>' + '------------' + '</br>');
 
 document.write('</br>'+'Prediction of pool prizes'+'</br>'+ '</br>');
 
-loopPrizes:
-while (btc < 725000) {
-    days ++;
-    btc += 5000;
-    if (btc == 45000 && btc < 50000) {
-    document.write(`<b>${days}</b> days for <b> 22 USD </b>`+ '</br>');
-    }
-    if (btc == 50000 && btc < 75000) {
-    document.write(`<b> ${days}</b> days for <b> 25 USD </b>`+ '</br>');
-    }
-    if (btc == 75000 && btc < 95000) {
-    document.write(`<b>${days}</b> days for <b> 50 USD </b>`+ '</br>');
-    }
-    if (btc == 95000 && btc < 125000) {
-    document.write(`<b>${days}</b> days for <b> 69 USD </b>`+ '</br>');
-    }
-    if (btc == 125000 && btc < 250000) {
-    document.write(`<b>${days}</b> days for <b> 100 USD </b>`+ '</br>');
-    }
-    if (btc == 250000 && btc < 400000) {
-    document.write(`<b>${days}</b> days for <b> 250 USD </b>`+ '</br>');
-    }
-    if (btc == 400000 && btc < 475000) {
-    document.write(`<b>${days}</b> days for <b> 420 USD </b>`+ '</br>');
-    }
-    if (btc == 475000 && btc < 725000) {
-    document.write(`<b>${days}</b> days for <b> 500 USD </b>`+ '</br>');
-    }
-    if (btc == 725000) {
-    document.write(`<b>${days}</b> days for <b> 1000 USD </b>`+ '</br>');
-    break
-    }
-
-}
-
+//---CONST 'streamDays' IS THE CUANTY OF DAYS OF STREAMING AVERAGE AND 'points' IS THE AVERAGE GAINED PER STREAM
 
 const predictor = (streamDays, points) => {
+
 		let res = streamDays * points;
+
 		if (res > p22 && res < p25) {
-			document.write(`${res} points for <b>${dollar22} USD</b> in <b>${streamDays} days</b>`+'</br>');
+			document.write(`<b style='color:green'>${res}</b> points for <b>${dollar22} USD</b> in <b>${streamDays} days</b>`+'</br>');
 		}
-		if (res > p25 && res < p50) {
-			document.write(`${res} points for <b>${dollar25} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		if (res >= p25 && res < p50) {
+			document.write(`<b style='color:green'>${res}</b> points for <b>${dollar25} USD</b> in <b>${streamDays} days</b>`+'</br>');
 		}
-		if (res > p50 && res < p69) {
-			document.write(`${res} points for <b>${dollar50} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		if (res >= p50 && res < p69) {
+			document.write(`<b style='color:green'>${res}</b> points for <b>${dollar50} USD</b> in <b>${streamDays} days</b>`+'</br>');
 		}
-		if (res > p69 && res < p100) {
-			document.write(`${res} points for <b>${dollar69} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		if (res >= p69 && res < p100) {
+			document.write(`<b style='color:green'>${res}</b> points for <b>${dollar69} USD</b> in <b>${streamDays} days</b>`+'</br>');
 		}
-		if (res > p100 && res < p250) {
-			document.write(`${res} points for <b>${dollar100} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		if (res >= p100 && res < p250) {
+			document.write(`<b style='color:green'>${res}</b> points for <b>${dollar100} USD</b> in <b>${streamDays} days</b>`+'</br>');
 		}
-		if (res > p250 && res < p420) {
-			document.write(`${res} points for <b>${dollar250} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		if (res >= p250 && res < p420) {
+			document.write(`<b style='color:green'>${res}</b> points for <b>${dollar250} USD</b> in <b>${streamDays} days</b>`+'</br>');
 		}
-		if (res > p420 && res < p500) {
-			document.write(`${res} points for <b>${dollar420} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		if (res >= p420 && res < p500) {
+			document.write(`<b style='color:green'>${res}</b> points for <b>${dollar420} USD</b> in <b>${streamDays} days</b>`+'</br>');
 		}
-		if (res > p500 && res < p1000) {
-			document.write(`${res} points for <b>${dollar500} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		if (res >= p500 && res < p1000) {
+			document.write(`<b style='color:green'>${res}</b> points for <b>${dollar500} USD</b> in <b>${streamDays} days</b>`+'</br>');
 		}
 		if (res >= p1000) {
 			document.write(`${res} points for <b>${dollar1000} USD</b> in <b>${streamDays} days</b>`+'</br>');
@@ -130,4 +97,4 @@ const predictor = (streamDays, points) => {
 
 document.write('------------' + '</br>' + '------------' + '</br>');
 
-predictor(23, 2500);
+predictor(22, 4300);

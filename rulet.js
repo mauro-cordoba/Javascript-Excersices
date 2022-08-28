@@ -17,5 +17,5 @@ const roulette = (n) => {
 		}
 }
 
-roulette(8);
+roulette(12);
 

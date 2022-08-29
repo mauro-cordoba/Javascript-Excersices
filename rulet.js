@@ -27,13 +27,14 @@
 let win = 0;
 let bet = 0.1;
 let $money = 0;
-let $dollarBet = 0;
+let gained = 0;
+let gamble = 0;
 
 const predictor = (myColor, n) => {
 		myColor = myColor.toUpperCase();
-		let winner = true;
 		let start = 0;
 		let end = 36;
+
 		for (let i = 0; i < n; i++) {
 			let ball = Math.floor(Math.random() * (end - start + 1)) + start;			
 			if ( ball%2 == 0 && ball != 0){
@@ -43,16 +44,16 @@ const predictor = (myColor, n) => {
 				if (myColor == $colorBlack) {
 					document.write(`BALL: ${ball}<b style='color:#5787dc'></br>You WIN</b>'</br>'`);
 					win++;
-					$money += .1;
-					bet = 0.1;
-					document.write(`Money gained: ${$money} $ </br></br></br>`);
+					gained = bet * 2;
+					document.write(`Money gained: ${gained} $ </br></br></br>`);
+					bet = .1;
+					$money += gained;
 				}
 				if (myColor != $colorBlack) {
-					winner = false;
 					document.write(`BALL: ${ball}<b style='color:red'></br>You LOSE</b>'</br>'`);
 					bet = bet*2;
-					$dollarBet += bet;
-					document.write(`BET: ${$dollarBet} $ </br></br></br>`);
+					gamble += bet;
+					document.write(`BET: ${bet} $ </br></br>`);
 				} 
 			}	
 
@@ -63,15 +64,16 @@ const predictor = (myColor, n) => {
 				if (myColor == $colorRed) {
 					document.write(`BALL: ${ball}<b style='color:#5787dc'></br>You WIN</b>'</br>'`);
 					win++;
-					$money += .1;
-					bet = 0.1;
-					document.write(`Money gained: ${$money} $ </br></br></br>`);
+					gained = bet * 2;
+					document.write(`Money gained: ${gained} $ </br></br>`);
+					bet = .1;
+					$money += gained;
 				}
 				if ( myColor != $colorRed) {
 					document.write(`BALL: ${ball}<b style='color:red'></br>You LOSE</b>'</br>'`);
 					bet = bet*2;
-					$dollarBet += bet;
-					document.write(`BET: ${$dollarBet} $ </br></br></br>`);
+					gamble += bet;
+					document.write(`BET: ${bet} $ </br></br>`);
 				}
 			}
 			if ( ball == 0) {
@@ -81,15 +83,16 @@ const predictor = (myColor, n) => {
 				if (myColor == $colorGreen) {
 					document.write(`BALL: ${ball}<b style='color:#5787dc'></br>You WIN</b>'</br>'`);
 					win++;
-					bet = 0.1;
-					$money += .1;
-					document.write(`Money gained: ${$money} $ </br></br>`);
+					gained = bet * 2;
+					document.write(`Money gained: ${gained} $ </br></br>`);
+					bet = .1;
+					$money += gained;
 				}
 				if (myColor != $colorGreen) {
 					document.write(`BALL: ${ball}<b style='color:red'></br>You LOSE</b>'</br>'`);
 					bet = bet*2;
-					$dollarBet += bet;
-					document.write(`BET: ${$dollarBet} $ </br></br>`);
+					gamble += bet;
+					document.write(`BET: ${bet} $ </br></br>`);
 				}
 			}
 
@@ -98,11 +101,13 @@ const predictor = (myColor, n) => {
 
 }
 
-predictor('red', 5);
+predictor('red', 10);
 // let turns = prompt('Insert turns of roulette:')
-let averageWin = Math.round(( win / 5) * 100);
+let averageWin = Math.round(( win / 10) * 100);
+let profit = $money - gamble;
 
-document.write(`Percentage of win: ${averageWin} % </br>`);
-document.write(`Dollars gained: ${$money} U$s </br>`);
+document.write(`Percentage of win: <b>${averageWin} %</b> </br>`);
+document.write(`Dollars gained: <b>${$money} U$s</b> </br>`);
+document.write(`Profits: <b>${profit} U$s</b> </br>`);
 
 

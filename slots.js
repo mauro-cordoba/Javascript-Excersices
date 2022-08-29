@@ -52,7 +52,7 @@ let profitsBtc = [
 	['Bitcoin1000', btc1000]
 ]
 
-for ( let i = 0; i < profitsBtc.length; i++) {
+for (let i = 0; i < profitsBtc.length	; i++) {
     document.write(`${i+1}, Coeficient Prize ${profitsBtc[i][0]} : <b>${profitsBtc[i][1]}</b>`+ '</br>');
 }
 

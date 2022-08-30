@@ -176,10 +176,9 @@ document.write(`Percentage of Win: <b style='color:green'>${winneable}%</b></br>
 document.write(`<b>${time} min</b> to earn money</br></br>`);
 
 
-let n = 20;
 let resultWiinner = 0;
 
-for (let i = 0; i < n; i++) {
+for (let i = 0; i < 20; i++) {
 	let stake = 105;
 	let goal = 7 + stake;
 	let bet = 0.05;
@@ -241,7 +240,7 @@ for (let i = 0; i < n; i++) {
 		}
 	}
 	let winneable = win / turns;
-	let predictionWinner = (winneable / n) * 1000;
+	let predictionWinner = (winneable / 10) * 1000;
 	document.write(`% of Win: ${predictionWinner}</br>`);
 	let resultWiinner =+ predictionWinner;
 }

@@ -91,16 +91,18 @@
 // document.write(`<b style='color:green'>Profits</b>: <b>${profit} U$s</b> </br>`);
 
 
-let stake = 25;
-let goal = 5.5 + stake;
+let stake = 105;
+let goal = 7 + stake;
 let bet = 0.05;
 let start = 0;
-let end = 14;
+let end = 36;
 let turns = 0;
+let win = 0;
 let maxBet = [];
 let prediction = 'RED';
 
-while (stake <= goal) {
+Roulette:
+while (stake <= goal && stake > 0) {
 	let color = '';
 	let ball = Math.floor(Math.random() * (end - start + 1)) + start;
 	if (ball == 0) {
@@ -108,10 +110,11 @@ while (stake <= goal) {
 		if (color === prediction){
 			stake += bet;
 			turns ++;
+			win ++;
 			bet = 0.05;
 		}
 		if ( color != prediction) {
-			stake - bet;
+			stake -= bet;
 			turns++;
 			bet = bet *2;
 			maxBet.push(bet);
@@ -123,10 +126,11 @@ while (stake <= goal) {
 		if (color === prediction){
 			stake += bet;
 			turns ++;
+			win ++;
 			bet = 0.05;
 		}
 		if ( color != prediction) {
-			stake - bet;
+			stake -= bet;
 			turns++;
 			bet = bet *2;
 			maxBet.push(bet);
@@ -138,10 +142,11 @@ while (stake <= goal) {
 		if (color === prediction){
 			stake += bet;
 			turns ++;
+			win ++;
 			bet = 0.05;
 		}
 		if ( color != prediction) {
-			stake - bet;
+			stake -= bet;
 			turns++;
 			bet = bet *2;
 			maxBet.push(bet);
@@ -150,8 +155,7 @@ while (stake <= goal) {
 }
 
 let $maxBet = Math.max(maxBet);
-
-console.log(typeof maxBet);
+let winneable = (win / turns) * 100;
 
 const max = (arr) => {
 	let max = arr[0];
@@ -163,8 +167,98 @@ const max = (arr) => {
 }
 
 $maxBet = max(maxBet);
+let time = (turns * 10) / 60;
 
-document.write(`${stake} u$s in stake </br>`);
-document.write(`${turns} turns to profit goal </br>`);
-document.write(`${$maxBet}: Bet max </br>`);
-document.write(`${maxBet}</br>`);
+document.write(`<b style='color:green'>${stake}</b> u$s in stake </br>`);
+document.write(`<b>${turns}</b> TURNS to profit goal </br>`);
+document.write(`<b style='color:red'>${$maxBet}</b>: Bet max </br>`);
+document.write(`Percentage of Win: <b style='color:green'>${winneable}%</b></br>`)
+document.write(`<b>${time} min</b> to earn money</br></br>`);
+
+
+let n = 20;
+let resultWiinner = 0;
+
+for (let i = 0; i < n; i++) {
+	let stake = 105;
+	let goal = 7 + stake;
+	let bet = 0.05;
+	let start = 0;
+	let end = 36;
+	let turns = 0;
+	let win = 0;
+	let maxBet = [];
+	let prediction = 'RED';
+	while (stake <= goal && stake > 0) {
+		let color = '';
+		let ball = Math.floor(Math.random() * (end - start + 1)) + start;
+		if (ball == 0) {
+			color = 'GREEN';
+			if (color === prediction){
+				stake += bet;
+				turns ++;
+				win ++;
+				bet = 0.05;
+			}
+			if ( color != prediction) {
+				stake -= bet;
+				turns++;
+				bet = bet *2;
+				maxBet.push(bet);
+			}
+		}
+	
+		if (ball %2 == 0) {
+			color = 'RED';
+			if (color === prediction){
+				stake += bet;
+				turns ++;
+				win ++;
+				bet = 0.05;
+			}
+			if ( color != prediction) {
+				stake -= bet;
+				turns++;
+				bet = bet *2;
+				maxBet.push(bet);
+			}
+		}
+	
+		if (ball %2 !=0) {
+			color = 'BLACK';
+			if (color === prediction){
+				stake += bet;
+				turns ++;
+				win ++;
+				bet = 0.05;
+			}
+			if ( color != prediction) {
+				stake -= bet;
+				turns++;
+				bet = bet *2;
+				maxBet.push(bet);
+			}
+		}
+	}
+	let winneable = win / turns;
+	let predictionWinner = (winneable / n) * 1000;
+	document.write(`% of Win: ${predictionWinner}</br>`);
+	let resultWiinner =+ predictionWinner;
+}
+
+document.write(`Average Win: <b>${resultWiinner}</b></br></br>`);
+
+document.write(`----Force Negative Racha----</br></br>`);
+let $bolsa = 105;
+let apuesta = 0.05;
+let rachaNegativa = 0;
+
+while ($bolsa > apuesta) {
+	$bolsa = $bolsa - apuesta;
+	apuesta = apuesta * 2;
+	rachaNegativa++;
+	document.write(`Stack: ${$bolsa} </br>`);
+	document.write(`Racha Negativa: <b>${rachaNegativa}</b></br>`);
+	document.write(`Bet: ${apuesta} </br></br>`);
+	
+}

@@ -91,9 +91,10 @@
 // document.write(`<b style='color:green'>Profits</b>: <b>${profit} U$s</b> </br>`);
 
 
-let stake = 105;
-let goal = 7 + stake;
-let bet = 0.05;
+let stake = 2000;
+let goal = 6 + stake;
+let bet = 0.025;
+let overbet = 0.025;
 let start = 0;
 let end = 36;
 let turns = 0;
@@ -111,7 +112,7 @@ while (stake <= goal && stake > 0) {
 			stake += bet;
 			turns ++;
 			win ++;
-			bet = 0.05;
+			bet = overbet;
 		}
 		if ( color != prediction) {
 			stake -= bet;
@@ -127,7 +128,7 @@ while (stake <= goal && stake > 0) {
 			stake += bet;
 			turns ++;
 			win ++;
-			bet = 0.05;
+			bet = overbet;
 		}
 		if ( color != prediction) {
 			stake -= bet;
@@ -143,7 +144,7 @@ while (stake <= goal && stake > 0) {
 			stake += bet;
 			turns ++;
 			win ++;
-			bet = 0.05;
+			bet = overbet;
 		}
 		if ( color != prediction) {
 			stake -= bet;
@@ -174,14 +175,16 @@ document.write(`<b>${turns}</b> TURNS to profit goal </br>`);
 document.write(`<b style='color:red'>${$maxBet}</b>: Bet max </br>`);
 document.write(`Percentage of Win: <b style='color:green'>${winneable}%</b></br>`)
 document.write(`<b>${time} min</b> to earn money</br></br>`);
+document.write(maxBet + '</br></br>');
 
 
 let resultWiinner = 0;
-
-for (let i = 0; i < 20; i++) {
-	let stake = 105;
-	let goal = 7 + stake;
-	let bet = 0.05;
+let n = 100;
+for (let i = 0; i < n; i++) {
+	let stake = 2000;
+	let goal = 6 + stake;
+	let bet = 0.025;
+	let overbet = 0.025;
 	let start = 0;
 	let end = 36;
 	let turns = 0;
@@ -197,7 +200,7 @@ for (let i = 0; i < 20; i++) {
 				stake += bet;
 				turns ++;
 				win ++;
-				bet = 0.05;
+				bet = overbet;
 			}
 			if ( color != prediction) {
 				stake -= bet;
@@ -213,7 +216,7 @@ for (let i = 0; i < 20; i++) {
 				stake += bet;
 				turns ++;
 				win ++;
-				bet = 0.05;
+				bet = overbet;
 			}
 			if ( color != prediction) {
 				stake -= bet;
@@ -229,7 +232,7 @@ for (let i = 0; i < 20; i++) {
 				stake += bet;
 				turns ++;
 				win ++;
-				bet = 0.05;
+				bet = overbet;
 			}
 			if ( color != prediction) {
 				stake -= bet;
@@ -238,18 +241,18 @@ for (let i = 0; i < 20; i++) {
 				maxBet.push(bet);
 			}
 		}
+		
 	}
-	let winneable = win / turns;
-	let predictionWinner = (winneable / 10) * 1000;
-	document.write(`% of Win: ${predictionWinner}</br>`);
-	let resultWiinner =+ predictionWinner;
+	let winneable = (win / turns) * 100;
+	document.write(`% of Win: ${winneable}</br>`);
+	resultWiinner += winneable / n;
 }
 
-document.write(`Average Win: <b>${resultWiinner}</b></br></br>`);
+document.write(`</br>Average Win: <b>${resultWiinner}%</b></br></br>`);
 
 document.write(`----Force Negative Racha----</br></br>`);
-let $bolsa = 105;
-let apuesta = 0.05;
+let $bolsa = 2000;
+let apuesta = 0.025;
 let rachaNegativa = 0;
 
 while ($bolsa > apuesta) {

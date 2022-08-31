@@ -91,25 +91,27 @@
 // document.write(`<b style='color:green'>Profits</b>: <b>${profit} U$s</b> </br>`);
 
 
-let stake = 2000;
+let stake = 200;
 let goal = 6 + stake;
-let bet = 0.025;
-let overbet = 0.025;
+let bet = 0.1;
+let overbet = 0.1;
 let start = 0;
 let end = 36;
 let turns = 0;
 let win = 0;
 let maxBet = [];
-let prediction = 'RED';
+const colors =[]
+let prediction = 'BLACK';
 
 Roulette:
 while (stake <= goal && stake > 0) {
 	let color = '';
 	let ball = Math.floor(Math.random() * (end - start + 1)) + start;
-	if (ball == 0) {
+	colors.push(ball);
+	if (ball === 0) {
 		color = 'GREEN';
 		if (color === prediction){
-			stake += bet;
+			stake += (bet * 35);
 			turns ++;
 			win ++;
 			bet = overbet;
@@ -155,8 +157,27 @@ while (stake <= goal && stake > 0) {
 	}
 }
 
+
+
 let $maxBet = Math.max(maxBet);
 let winneable = (win / turns) * 100;
+const $colors = colors.join(' - ');
+
+rangeColors:
+	for (color of colors) {
+		if (color === 0){
+			document.write(`<b style='color:green'>${color}</b> `)
+		}
+		if (color %2 == 0) {
+			document.write(`<b style='color:black'>${color}</b> `)
+		} else {
+			document.write(`<b style='color:red'>${color}</b> `)
+		}
+	}
+
+
+document.write('</br> ------------------ </br></br>')
+
 
 const max = (arr) => {
 	let max = arr[0];
@@ -168,18 +189,30 @@ const max = (arr) => {
 }
 
 $maxBet = max(maxBet);
+
+colorBet:
+	for (bet of maxBet) {
+		if (bet > 0.2) {
+			document.write(`<b style='color:red'>${bet}</b> `);
+		} else {
+			document.write(`<b style='color:green'>${bet}</b> `);
+		}
+	}
+
+maxBet = maxBet.join(' ');
+
+
 let time = (turns * 10) / 60;
 
-document.write(`<b style='color:green'>${stake}</b> u$s in stake </br>`);
+document.write(`</br><b style='color:green'>${stake}</b> u$s in stake </br>`);
 document.write(`<b>${turns}</b> TURNS to profit goal </br>`);
 document.write(`<b style='color:red'>${$maxBet}</b>: Bet max </br>`);
 document.write(`Percentage of Win: <b style='color:green'>${winneable}%</b></br>`)
 document.write(`<b>${time} min</b> to earn money</br></br>`);
-document.write(maxBet + '</br></br>');
 
 
 let resultWiinner = 0;
-let n = 100;
+let n = 10;
 for (let i = 0; i < n; i++) {
 	let stake = 2000;
 	let goal = 6 + stake;
@@ -190,14 +223,14 @@ for (let i = 0; i < n; i++) {
 	let turns = 0;
 	let win = 0;
 	let maxBet = [];
-	let prediction = 'RED';
+	let prediction = 'BLACK';
 	while (stake <= goal && stake > 0) {
 		let color = '';
 		let ball = Math.floor(Math.random() * (end - start + 1)) + start;
-		if (ball == 0) {
+		if (ball === 0) {
 			color = 'GREEN';
 			if (color === prediction){
-				stake += bet;
+				stake += bet * 35;
 				turns ++;
 				win ++;
 				bet = overbet;
@@ -251,8 +284,8 @@ for (let i = 0; i < n; i++) {
 document.write(`</br>Average Win: <b>${resultWiinner}%</b></br></br>`);
 
 document.write(`----Force Negative Racha----</br></br>`);
-let $bolsa = 2000;
-let apuesta = 0.025;
+let $bolsa = 200;
+let apuesta = 0.1;
 let rachaNegativa = 0;
 
 while ($bolsa > apuesta) {

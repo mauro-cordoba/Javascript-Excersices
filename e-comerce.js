@@ -21,7 +21,7 @@ for (let i = 1; i < 12; i++) {
     let div = document.createElement("DIV");
     div.addEventListener("click",() =>{changeValue($code)})
     div.tabIndex = i;
-    div.classList.add(`item${i}`,'flex-item')
+    div.classList.add(`item${i}`,'flex-item');
     div.innerHTML = key[0] + key[1] + key[2] + key[3];
     documentFragment.appendChild(div);
 }

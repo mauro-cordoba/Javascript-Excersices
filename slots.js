@@ -47,6 +47,7 @@ let profitsBtc = [
 	['Bitcoin50', btc50],
 	['Bitcoin69', btc69],
 	['Bitcoin100', btc100],
+	['Bitcoin250', btc250],
 	['Bitcoin420', btc420],
 	['Bitcoin500', btc500],
 	['Bitcoin1000', btc1000]
@@ -92,9 +93,12 @@ const predictor = (streamDays, points) => {
 		}
 		if (res >= p1000) {
 			document.write(`${res} points for <b>${dollar1000} USD</b> in <b>${streamDays} days</b>`+'</br>');
+		} else {
+			document.write(`Points: <b>${res}</b> in <b>${streamDays} days</b>`+'</br>');
 		}
+
 }
 
 document.write('------------' + '</br>' + '------------' + '</br>');
 
-predictor(22, 4300);
+predictor(24, 5280);

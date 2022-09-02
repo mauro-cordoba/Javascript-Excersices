@@ -133,7 +133,8 @@ span:nth-of-type(1) {
 
 .active {
     border: 5px solid rgb(231, 196, 37);
-    box-shadow: 1px 1px 8px 10px rgb(135, 230, 135);
+    box-shadow: 1px 1px 6px 8px rgb(135, 230, 135);
+    z-index: 2;
 }
 
 .click {

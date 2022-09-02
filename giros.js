@@ -12,7 +12,47 @@ let $$prediction = [0, 1, 2, 3, 4, 7, 11, 12, 13, 14, 17, 18, 19, 20, 24, 27, 25
 let divStake = document.querySelector(".stake");
 let divTurns = document.querySelector(".turns");
 let documentFragment = document.createDocumentFragment();
-let selectorRulet = document.querySelector(".one");
+
+// ---VARIABLES SELCTORS IN ROULLETE---
+
+let selectorRuleto = document.querySelector(".zero");
+let selectorRulet1 = document.querySelector(".one");
+let selectorRulet2 = document.querySelector(".two");
+let selectorRulet3 = document.querySelector(".three");
+let selectorRulet4 = document.querySelector(".four");
+let selectorRulet5 = document.querySelector(".five");
+let selectorRulet6 = document.querySelector(".six");
+let selectorRulet7 = document.querySelector(".seven");
+let selectorRulet8 = document.querySelector(".eigth");
+let selectorRulet9 = document.querySelector(".nine");
+let selectorRulet10 = document.querySelector(".ten");
+let selectorRulet11 = document.querySelector(".eleven");
+let selectorRulet12 = document.querySelector(".twelve");
+let selectorRulet13 = document.querySelector(".thirdteen");
+let selectorRulet14 = document.querySelector(".fourteen");
+let selectorRulet15 = document.querySelector(".fifteen");
+let selectorRulet16 = document.querySelector(".sixteen");
+let selectorRulet17 = document.querySelector(".seventeen");
+let selectorRulet18 = document.querySelector(".eighteen");
+let selectorRulet19 = document.querySelector(".nineteen");
+let selectorRulet20 = document.querySelector(".twenty");
+let selectorRulet21 = document.querySelector(".twenty-one");
+let selectorRulet22 = document.querySelector(".twenty-two");
+let selectorRulet23 = document.querySelector(".twenty-three");
+let selectorRulet24 = document.querySelector(".twenty-four");
+let selectorRulet25 = document.querySelector(".twenty-five");
+let selectorRulet26 = document.querySelector(".twenty-six");
+let selectorRulet27 = document.querySelector(".twenty-seven");
+let selectorRulet28 = document.querySelector(".twenty-eigth");
+let selectorRulet29 = document.querySelector(".twenty-nine");
+let selectorRulet30 = document.querySelector(".thirty");
+let selectorRulet31 = document.querySelector(".thirty-one");
+let selectorRulet32 = document.querySelector(".thirty-two");
+let selectorRulet33 = document.querySelector(".thirty-three");
+let selectorRulet34 = document.querySelector(".thirty-four");
+let selectorRulet35 = document.querySelector(".thirty-five");
+let selectorRulet36 = document.querySelector(".thirty-six");
+
 let tiradas = [];
 
 while ($$stake <= $$goal && $$stake >= 0) {
@@ -60,26 +100,78 @@ while ($$stake <= $$goal && $$stake >= 0) {
 
 let lastNumber = tiradas[tiradas.length-1];
 
+if (lastNumber === 0) {
+    selectorRulet0.classList.add('active');
+}
 if (lastNumber === 1) {
-    selectorRulet.classList.toggle('active');
-} if (lastNumber === 2) {
-        selectorRulet.classList.toggle('active');
-    }
-        else if (lastNumber === 3) {
-            selectorRulet.classList.toggle('active');
-        }
-           else if (lastNumber === 4) {
-                selectorRulet.classList.toggle('active');
-            }
-               else if (lastNumber === 5) {
-                    selectorRulet.classList.toggle('active');
-                }
-                   else if (lastNumber === 6) {
-                        selectorRulet.classList.toggle('active');
-                    }
-                       else if (lastNumber === 7) {
-                            selectorRulet.classList.toggle('active');
-                        }
+    selectorRulet1.classList.add('active');
+}
+if (lastNumber === 2) {
+    selectorRulet2.classList.add('active');
+}
+if (lastNumber === 3) {
+    selectorRulet3.classList.add('active');
+}
+if (lastNumber === 4) {
+    selectorRulet4.classList.add('active');
+}
+if (lastNumber === 5) {
+    selectorRulet5.classList.add('active');
+}
+if (lastNumber === 6) {
+    selectorRulet6.classList.add('active');
+}
+if (lastNumber === 7) {
+    selectorRulet7.classList.add('active');
+}
+if (lastNumber === 8) {
+    selectorRulet8.classList.add('active');
+}
+if (lastNumber === 9) {
+    selectorRulet9.classList.add('active');
+}
+if (lastNumber === 10) {
+    selectorRulet10.classList.add('active');
+}
+if (lastNumber === 11) {
+    selectorRulet11.classList.add('active');
+}
+if (lastNumber === 12) {
+    selectorRulet8.classList.add('active');
+}
+if (lastNumber === 13) {
+    selectorRulet8.classList.add('active');
+}
+if (lastNumber === 14) {
+    selectorRulet8.classList.add('active');
+}
+if (lastNumber === 15) {
+    selectorRulet15.classList.add('active');
+}
+if (lastNumber === 16) {
+    selectorRulet8.classList.add('active');
+}
+if (lastNumber === 17) {
+    selectorRulet17.classList.add('active');
+}
+if (lastNumber === 18) {
+    selectorRulet18.classList.add('active');
+}
+if (lastNumber === 19) {
+    selectorRulet20.classList.add('active');
+}
+if (lastNumber === 7) {
+    selectorRulet8.classList.add('active');
+}
+if (lastNumber === 7) {
+    selectorRulet8.classList.add('active');
+}
+if (lastNumber === 7) {
+    selectorRulet8.classList.add('active');
+}
+if (lastNumber === 7) {
+    selectorRulet8.classList.add('active');
+}
 
 
 $$stake = Math.floor($$stake);

@@ -220,9 +220,9 @@ $$stake = Math.floor($$stake);
 divStake.innerHTML = (`${$$stake} u$s`);
 divTurns.innerHTML = (`${$$turns} giros`);
 
-boton = document.querySelector(".ball");
+const boton = document.querySelector(".ball");
+boton.addEventListener("click", girar);
 
-function girar (e) {
-    addEventListener(onclick);
+function girar () {
     alert("se gira la ruleta");
 }

@@ -6,7 +6,10 @@
 
 .main-conteiner {
     display: flex;
+    background-image: url(/ruleta.webp);
+    background-size: cover;
 }
+
 
 .roullete {
     display: flex;
@@ -52,6 +55,8 @@
 
 .stake {
     display: flex;
+    font-size: 20px;
+    font-weight: bold;
     width: 150px;
     height: 60px;
     justify-content: center;
@@ -63,6 +68,8 @@
 
 .turns {
     display: flex;
+    font-size: 20px;
+    font-weight: bold;
     width: 150px;
     height: 60px;
     justify-content: center;
@@ -139,6 +146,7 @@ span:nth-of-type(1) {
 
 .click {
     padding: 12px 20px;
+    font-size: 15px;
     font-weight: bold;
     border: none;
     box-shadow: 1px 1px 2px 2px rgb(92, 89, 89);

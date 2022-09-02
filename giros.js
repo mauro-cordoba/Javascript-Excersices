@@ -137,19 +137,19 @@ if (lastNumber === 11) {
     selectorRulet11.classList.add('active');
 }
 if (lastNumber === 12) {
-    selectorRulet8.classList.add('active');
+    selectorRulet12.classList.add('active');
 }
 if (lastNumber === 13) {
-    selectorRulet8.classList.add('active');
+    selectorRulet13.classList.add('active');
 }
 if (lastNumber === 14) {
-    selectorRulet8.classList.add('active');
+    selectorRulet14.classList.add('active');
 }
 if (lastNumber === 15) {
     selectorRulet15.classList.add('active');
 }
 if (lastNumber === 16) {
-    selectorRulet8.classList.add('active');
+    selectorRulet16.classList.add('active');
 }
 if (lastNumber === 17) {
     selectorRulet17.classList.add('active');
@@ -158,19 +158,61 @@ if (lastNumber === 18) {
     selectorRulet18.classList.add('active');
 }
 if (lastNumber === 19) {
+    selectorRulet19.classList.add('active');
+}
+if (lastNumber === 20) {
     selectorRulet20.classList.add('active');
 }
-if (lastNumber === 7) {
-    selectorRulet8.classList.add('active');
+if (lastNumber === 21) {
+    selectorRulet21.classList.add('active');
 }
-if (lastNumber === 7) {
-    selectorRulet8.classList.add('active');
+if (lastNumber === 22) {
+    selectorRulet22.classList.add('active');
 }
-if (lastNumber === 7) {
-    selectorRulet8.classList.add('active');
+if (lastNumber === 23) {
+    selectorRulet23.classList.add('active');
 }
-if (lastNumber === 7) {
-    selectorRulet8.classList.add('active');
+if (lastNumber === 23) {
+    selectorRulet23.classList.add('active');
+}
+if (lastNumber === 24) {
+    selectorRulet24.classList.add('active');
+}
+if (lastNumber === 25) {
+    selectorRulet25.classList.add('active');
+}
+if (lastNumber === 26) {
+    selectorRulet26.classList.add('active');
+}
+if (lastNumber === 27) {
+    selectorRulet27.classList.add('active');
+}
+if (lastNumber === 28) {
+    selectorRulet28.classList.add('active');
+}
+if (lastNumber === 29) {
+    selectorRulet29.classList.add('active');
+}
+if (lastNumber === 30) {
+    selectorRulet30.classList.add('active');
+}
+if (lastNumber === 31) {
+    selectorRulet31.classList.add('active');
+}
+if (lastNumber === 32) {
+    selectorRulet32.classList.add('active');
+}
+if (lastNumber === 33) {
+    selectorRulet33.classList.add('active');
+}
+if (lastNumber === 34) {
+    selectorRulet34.classList.add('active');
+}
+if (lastNumber === 35) {
+    selectorRulet35.classList.add('active');
+}
+if (lastNumber === 36) {
+    selectorRulet36.classList.add('active');
 }
 
 

@@ -144,7 +144,7 @@ span:nth-of-type(1) {
     z-index: 2;
 }
 
-.click {
+.ball {
     padding: 12px 20px;
     font-size: 15px;
     font-weight: bold;

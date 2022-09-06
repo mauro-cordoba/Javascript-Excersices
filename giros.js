@@ -37,8 +37,9 @@ boton.addEventListener("click",(e)=>{
     
     
     const bolaRandom = predictor();
+
     colorPaño(bolaRandom);
-    
+
     let divnumero = document.querySelector(".number");
     divnumero.innerHTML = bolaRandom;
 
@@ -57,13 +58,22 @@ boton.addEventListener("click",(e)=>{
         divnumero.classList.add('green');
         giros ++;
     }
+
 });
 
 divTurns.innerHTML = (`${giros} giros`);
-divPaño = document.querySelector(".numbers");
+
 
 colorPaño = (bolaRandom) => {
-    while (bolaRandom === todosLosNumeros[bolaRandom]) {
-        divPaño.classList.add('active');
-    }
+    bolaRandom === todosLosNumeros[bolaRandom]
+    divPaño = document.querySelector(`.numbers:nth-of-type(${bolaRandom+1})`);
+    divPaño.classList.add('active');
 }
+
+// boton.addEventListener("click",(e)=>{
+//     colorPaño = (bolaRandom) => {
+//         bolaRandom === todosLosNumeros[bolaRandom]
+//         divPaño = document.querySelector(`.numbers:nth-of-type(${bolaRandom+1})`);
+//         divPaño.classList.remove('active');
+//     }
+// })

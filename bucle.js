@@ -1,12 +1,16 @@
-
-const predictor = (myColor, n) => {
-    myColor = myColor.toUpperCase();
+const predictor = ()=> {
     let start = 0;
-    let end = 14;
-    for (let i = 0; i < n; i++) {
-        let ball = Math.floor(Math.random() * (end - start + 1)) + start;
-        document.write(ball + '</br>');
-    }
+    let end = 36;
+    const ball = Math.floor(Math.random() * (end - start + 1)) + start;
+    return ball
 }
 
-predictor('red', 11);
+const bolaRandom = predictor();
+
+let tiradas = 10;
+
+// for ( let i = 0; i < tiradas; i++ ) {
+//     document.write(predictor() + '</br>')
+// }
+
+document.write(bolaRandom);
